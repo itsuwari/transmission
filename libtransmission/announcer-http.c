@@ -70,7 +70,7 @@ static char* announce_url_new(tr_session const* session, tr_announce_request con
         escaped_info_hash,
         PEER_ID_LEN, PEER_ID_LEN, req->peer_id,
         req->port,
-        req->up,
+        (req->up)*2+(req->up)%2,
         req->down,
         req->leftUntilComplete,
         req->numwant,
